@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Game Title</title>
+    <title>Battle of the Bands!</title>
     <style>
         /* Add CSS styles for your game here */
     </style>
@@ -14,6 +14,7 @@
 </body>
 </html>
 
+<a href="https://www.battle-of-the-bands-by-milosz.com">Link Text</a>
 
 import random
 import unittest
