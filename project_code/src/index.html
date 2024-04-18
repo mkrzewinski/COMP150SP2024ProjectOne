@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of the Bands!</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0; /* Background color for the entire page */
+      }
+
+      canvas {
+          border: 2px solid #333; /* Border for the canvas */
+          background-color: #fff; /* Background color for the canvas */
+      }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script src="game.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Graphic</title>
+    <style>
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="guitarCanvas" width="400" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('guitarCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw guitar body
+        ctx.fillStyle = '#804000'; // Brown color
+        ctx.beginPath();
+        ctx.moveTo(100, 200); // Start point
+        ctx.lineTo(300, 200); // Top right corner
+        ctx.lineTo(300, 500); // Bottom right corner
+        ctx.quadraticCurveTo(250, 550, 200, 500); // Bottom curve
+        ctx.quadraticCurveTo(150, 550, 100, 500); // Bottom left curve
+        ctx.closePath();
+        ctx.fill();
+
+        // Draw guitar neck
+        ctx.fillStyle = '#804000'; // Brown color
+        ctx.fillRect(90, 150, 20, 350); // Neck rectangle
+
+        // Draw guitar headstock
+        ctx.fillStyle = '#804000'; // Brown color
+        ctx.fillRect(60, 100, 60, 70); // Headstock rectangle
+
+        // Draw guitar strings
+        ctx.strokeStyle = '#000'; // Black color
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(70, 160); // String 1
+        ctx.lineTo(290, 160);
+        ctx.moveTo(70, 200); // String 2
+        ctx.lineTo(290, 200);
+        ctx.moveTo(70, 240); // String 3
+        ctx.lineTo(290, 240);
+        ctx.moveTo(70, 280); // String 4
+        ctx.lineTo(290, 280);
+        ctx.moveTo(70, 320); // String 5
+        ctx.lineTo(290, 320);
+        ctx.stroke();
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Set</title>
+    <style>
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drumsetCanvas" width="600" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('drumsetCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw bass drum
+        ctx.fillStyle = '#000'; // Black color
+        ctx.beginPath();
+        ctx.arc(150, 350, 100, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw snare drum
+        ctx.fillStyle = '#000'; // Black color
+        ctx.beginPath();
+        ctx.arc(300, 250, 50, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw hi-hat cymbals
+        ctx.strokeStyle = '#000'; // Black color
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(450, 200, 60, Math.PI / 6, Math.PI * 5 / 6); // Top cymbal
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(450, 200, 50, Math.PI / 6, Math.PI * 5 / 6); // Bottom cymbal
+        ctx.stroke();
+
+        // Draw floor tom
+        ctx.fillStyle = '#000'; // Black color
+        ctx.fillRect(100, 300, 100, 80);
+
+        // Draw rack tom
+        ctx.fillStyle = '#000'; // Black color
+        ctx.fillRect(300, 300, 80, 60);
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microphone</title>
+    <style>
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="microphoneCanvas" width="400" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('microphoneCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw microphone stand
+        ctx.fillStyle = '#000'; // Black color
+        ctx.fillRect(180, 300, 40, 250); // Stand rectangle
+
+        // Draw microphone body
+        ctx.fillStyle = '#999'; // Gray color
+        ctx.beginPath();
+        ctx.arc(200, 150, 100, 0, Math.PI * 2); // Body outer circle
+        ctx.fill();
+        ctx.fillStyle = '#ccc'; // Light gray color
+        ctx.beginPath();
+        ctx.arc(200, 150, 80, 0, Math.PI * 2); // Body inner circle
+        ctx.fill();
+
+        // Draw microphone head
+        ctx.fillStyle = '#000'; // Black color
+        ctx.beginPath();
+        ctx.arc(200, 100, 40, 0, Math.PI * 2); // Head circle
+        ctx.fill();
+    </script>
+</body>
+</html>
+
+<a href="https://www.battle-of-the-bands-by-milosz.com">Link Text</a>
